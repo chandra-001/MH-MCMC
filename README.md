@@ -6,4 +6,4 @@ This is a demonstration of the Metropolis-Hastings algorithm for Bayesian infere
 An example plot ('inference.png') have been provided in the directory 'examples', which shows the infered parameters with initial guess $\Omega_m = 0.30$ and $h=0.67$.
 
 ## How the code works
-It reads redshifts and distance modulus ($\mu$) values from the file 'jla_mub.txt' and the corresponding covariance matrix from the file 'jla_mub_covmatrix.dat'. The model for distance modulus is used as $\mu = 25 - 5\log(h) + 5\log(D_L(h=1,\Omega_m, z))$ while estimating the log-likelihood, with $D_L(h, \Omega_m, z)$ being the luminosity distance. A flat proposal distribution has been used for the mcmc random-walker.
+It reads redshifts and distance modulus ($\mu$) values from the file 'jla_mub.txt' and the corresponding covariance matrix from the file 'jla_mub_covmatrix.dat'. The model for distance modulus is used as $\mu = 25 - 5\log(h) + 5\log(D_L(z;\Omega_m, h=1))$ while estimating the log-likelihood, with $D_L(z;\Omega_m, h)$ being the luminosity distance. A flat proposal distribution has been used for the mcmc random-walker.
